@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Cindy Wang personal portfolio" />
+  <title>Cindy Wang</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home">Cindy Wang</a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#data-science">Data Science</a>
+          <a href="#robotics">Robotics</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">☾ Dark</button>
+      </div>
+    </div>
+  </header>
+  <main id="home" class="wrap">
+    <section id="about" class="hero" aria-labelledby="hello">
+      <div class="eyebrow">cs/ai, math, and physics @ mit</div>
+      <h1 id="hello">Hi, I'm Cindy.</h1>
+      <p class="intro">I'm passionate about harnessing cutting-edge tech for real-world impact, from sustainability to materials discovery and physics. Currently, I'm interested in AI/ML, data science, and robotics. Previously, I've worked on research at NASA and MIT's Research Science Institute.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#interests">See my work ↓</a>
+        <a class="btn" href="https://github.com/windycindyvibes" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a class="btn" href="mailto:cwang08@mit.edu">Email me ↗</a>
+      </div>
+    </section>
+
+    <section id="interests" class="section" aria-labelledby="interests-heading">
+      <div class="section-heading">
+        <div class="eyebrow">Explore my interests</div>
+        <h2 id="interests-heading">Previous projects and work</h2>
+      </div>
+      <div class="overview">
+        <a class="overview-card data" href="#data-science">
+          <div><div class="number">01 / UNITED NATIONS COP29</div><h3>Data Science</h3><p>Unearthing patterns in historical data to tackle drought events and curb agricultural water use</p></div>
+          <div class="go">Solutions and projects ↗</div>
+        </a>
+        <a class="overview-card robot" href="#robotics">
+          <div><div class="number">02 / FIRST TECH CHALLENGE</div><h3>Robotics</h3><p>Sensors and control theory; graphic design communicating technical work</p></div>
+          <div class="go">Portfolio ↗</div>
+        </a>
+      </div>
+    </section>
+
+    <section id="data-science" class="section" aria-labelledby="data-heading">
+      <div class="eyebrow">01 / Data Science</div>
+      <h2 id="data-heading">Visualization, Analysis, and Modeling</h2>
+      <div class="detail">
+        <div>
+          <p class="muted">I'm interested in leveraging the power of data science to make a real-world impact, whether that be through exploratory data analysis for improving sustainability, visualization to explore the edges of our universe at NASA, or modeling online social media patterns.</p>
+          <div class="mini-project"><strong>Tools & skills</strong><span class="muted">Python · pandas · NumPy · Matplotlib · Seaborn · R/RStudio · tidyverse · ggplot2 · dplyr · ggiraph</span></div>
+          <div class="mini-project"><strong>HydroCure Solutions @ United Nations COP29</strong><span class="muted"><i>Top 3 out of 1008 teams.</i> Reducing agricultural water waste to improve drought mitigation.</span></div>
+        </div>
+        <a id="sustainability" class="panel sustainability-card" href="sustainability-project.html" aria-label="Explore the sustainability data project">
+          <span class="tag">Project / Drought Severity Analysis</span>
+          <h3>Country-level drought severity distributions</h3>
+          <p>Driving questions: How are the reported human impacts correlated with drinking water access worldwide, and how do those impacts differ across countries?</p>
+          <span class="sustainability-link">Explore the project ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="robotics" class="section" aria-labelledby="robotics-heading">
+      <div class="eyebrow">02 / Robotics</div>
+      <h2 id="robotics-heading">FIRST Tech Challenge - Team 6200</h2>
+      <div class="robotics-layout">
+        <div class="robotics-copy">
+          <p class="muted"><b><i>Captain, Main programmer/outreach, Lead engineering notebook</i></b> <br></br> Designed sensor systems and computer vision algorithms; led STEM soutreach to thousands of young students in the community.</p>
+
+          <div id="portfolio-pdf" class="pdf-area">
+            <div class="eyebrow">Behind the bot</div>
+            <h3>Robotics Portfolios</h3>
+            <p class="muted">Made with ❤︎ in Canva. Translating technical work for a public audience. Click below to see the code, build, and outreach powering our robot.</p>
+
+            <div class="portfolio-tabs" role="tablist" aria-label="Choose robotics portfolio season">
+              <button class="portfolio-tab" type="button" id="tab-2024" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-season="2024-25">
+                <span class="season">2024–25</span>
+                <span class="hint">See previous portfolio ↗</span>
+              </button>
+              <button class="portfolio-tab" type="button" id="tab-2025" role="tab" aria-selected="true" aria-controls="portfolio-preview" data-season="2025-26">
+                <span class="season">2025–26</span>
+                <span class="hint">See this year's portfolio ↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-viewer">
+          <div id="portfolio-preview" role="tabpanel" aria-labelledby="tab-2025">
+          <div class="portfolio-toolbar">
+            <h3 id="selected-season-heading">2025–26 Portfolio</h3>
+            <a id="portfolio-open" class="btn primary" href="docs/robotics-portfolio-2025-26.pdf" target="_blank" rel="noopener noreferrer">Open 2025–26 PDF ↗</a>
+          </div>
+          <div class="pdf-frame">
+            <iframe id="portfolio-frame" src="docs/robotics-portfolio-2025-26.pdf" title="2025–26 robotics team portfolio PDF preview" loading="lazy"></iframe>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner"><span>© <span id="year"></span> Cindy Wang</span></div>
+  </footer>
+</body>
+</html>
